@@ -3,15 +3,14 @@ import datetime
 
 import deeplake
 from dotenv import load_dotenv
-from tqdm import tqdm
 
 load_dotenv()
 
-# ds = deeplake.load('hub://anudit/rainbow-table-2', reset=True)
+ds = deeplake.load('hub://anudit/rainbow-table-3', reset=True)
 
-ds = deeplake.empty('hub://anudit/rainbow-table-3')
-phonenumber = ds.create_tensor('phonenumber', htype='text')
-sha256hash = ds.create_tensor('sha256hash', htype='text')
+# ds = deeplake.empty('hub://anudit/rainbow-table-3')
+# phonenumber = ds.create_tensor('phonenumber', htype='text')
+# sha256hash = ds.create_tensor('sha256hash', htype='text')
 
 ds.commit()
 
